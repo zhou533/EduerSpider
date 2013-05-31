@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<task_url>http://www.joca.cn/%s/abstract/abstract%s.shtml</task_url>
+
+	<task_arg_count>2</task_arg_count>
+	<task_arg_list>
+		<task_arg type="ALPHA">a-b</task_arg>
+		<task_arg type="NUMBER">1-10023</task_arg>
+	</task_arg_list>
+	
+	<task_out_count>4</task_out_count>
+	<task_out_list>
+		<task_out type="TR_TD">10</task_out>
+		<task_out type="TR_TD">10</task_out>
+		<task_out type="CLASS_ID">ci_abstract</task_out>	
+		<task_out type="CLASS_ID">ci_address</task_out>
+	</task_out_list>
+		
+	<task_interval>10</task_interval>
+	<task_saved_dir>/home/liwei/crawler/joa/</task_saved_dir>
+	<task_is_save_html>true</task_is_save_html>
+	<task_saved_html_prefix>JOA_</task_saved_html_prefix>
+</config>
