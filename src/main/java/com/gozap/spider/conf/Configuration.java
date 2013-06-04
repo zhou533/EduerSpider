@@ -6,6 +6,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,12 +20,17 @@ public class Configuration {
     private static Configuration instance = new Configuration();
 
     private String url;
-
     private int interval; //
     private String savePath;
     private boolean isSaveHtml;
+    private boolean isOnlyEmail;
     private String taskName;
 
+
+
+    /*
+
+     */
     private Configuration(){
 
 
@@ -66,7 +72,10 @@ public class Configuration {
                 throw new Exception("invalid configuration file.");
             }
 
-
+            Element taskArgListElement = config.element("task_arg_list");
+            if (taskArgListElement != null){
+                List taskArgList = taskArgListElement.elements("task_arg");
+            }
 
 
             result = true;
@@ -94,6 +103,10 @@ public class Configuration {
 
     public boolean isSaveHtml() {
         return isSaveHtml;
+    }
+
+    public boolean isOnlyEmail() {
+        return isOnlyEmail;
     }
 
     public String getTaskName() {
