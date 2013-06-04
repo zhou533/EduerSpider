@@ -67,7 +67,7 @@ public class Configuration {
             SAXReader reader = new SAXReader();
             Document doc = reader.read(new File(filename));
 
-            Element config = doc.elementByID("config");
+            Element config = doc.getRootElement();
             if (config == null){
                 throw new Exception("invalid configuration file.");
             }
@@ -76,6 +76,7 @@ public class Configuration {
             if (taskArgListElement != null){
                 List taskArgList = taskArgListElement.elements("task_arg");
             }
+
 
 
             result = true;

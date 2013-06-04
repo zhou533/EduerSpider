@@ -26,11 +26,11 @@ public class Argument {
     public int count(){
         return 0;
     }
-    public String argListAtIndex(int index){
+    public String argAtIndex(int index){
         return null;
     }
 
-    public boolean isValidArgument(String arg){
+    protected boolean isValidArgument(String arg){
         String[] values = arg.split("-");
         if (values.length > 2 || values.length == 0){
             return false;

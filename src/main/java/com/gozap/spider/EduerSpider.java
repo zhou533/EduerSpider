@@ -1,5 +1,6 @@
 package com.gozap.spider;
 
+import com.gozap.spider.conf.Configuration;
 import org.apache.log4j.Logger;
 
 /**
@@ -19,6 +20,14 @@ public class EduerSpider {
             return;
         }
 
+        String cfgFilename = args[0];
+        if (cfgFilename == null || !Configuration.hasValidExt(cfgFilename)){
+            LOGGER.info("Invalid configuration file, please check it out.");
+            return;
+        }
 
+        LOGGER.info("Load configuration file: " + cfgFilename);
+
+        Configuration.getInstance().load("src/conf/" + cfgFilename);
     }
 }

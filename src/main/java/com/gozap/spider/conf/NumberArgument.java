@@ -33,14 +33,14 @@ public class NumberArgument extends Argument{
     }
 
     @Override
-    public String argListAtIndex(int index) {
+    public String argAtIndex(int index) {
         Iterator<Pair<String, String>> iterator = args.iterator();
         while (iterator.hasNext()){
             Pair<String, String> arg = iterator.next();
             int from = Integer.parseInt(arg.fst);
             int to = Integer.parseInt(arg.snd);
 
-            int dest = from + index - 1;
+            int dest = from + index;
             if (dest > to){
                 //
                 int len = to - from + 1;
@@ -53,7 +53,7 @@ public class NumberArgument extends Argument{
     }
 
     @Override
-    public boolean isValidArgument(String arg) {
+    protected boolean isValidArgument(String arg) {
         return super.isValidArgument(arg);    //To change body of overridden methods use File | Settings | File Templates.
     }
 }
