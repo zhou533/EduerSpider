@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<task_url>http://www.joca.cn/CN/abstract/abstract%s.shtml</task_url>
+	<task_url>http://www.washington.edu/home/peopledir/?length=full&amp;method=name&amp;term=*%s*&amp;whichdir=staff</task_url>
 
 	<task_arg_list>
-		<task_arg type="NUMBER">15906</task_arg>
+		<task_arg type="ALPHA">ab</task_arg>
 	</task_arg_list>
 
 	<task_out_list>
-        <task_out name="Name">TD:contains(通讯作者)</task_out>
-		<task_out name="Email">TD:contains(作者Email)</task_out>
+		<task_out name="Email">p:contains(@)</task_out>
 	</task_out_list>
 		
 	<task_interval>10</task_interval>
 	<task_saved_dir>/home/liwei/crawler/joa/</task_saved_dir>
 	<task_is_save_html>true</task_is_save_html>
-	<task_name>JOA</task_name>
+	<task_name>washington</task_name>
 </config>

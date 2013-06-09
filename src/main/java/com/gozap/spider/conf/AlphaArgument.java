@@ -15,7 +15,7 @@ import java.util.Iterator;
 public class AlphaArgument extends Argument{
     private static final Logger LOGGER = Logger.getLogger(AlphaArgument.class);
 
-    public AlphaArgument(String argString) {
+    public AlphaArgument(String argString) throws Exception{
         super(argString);
     }
 
@@ -28,7 +28,7 @@ public class AlphaArgument extends Argument{
             Pair<String, String> arg = iterator.next();
             String from = arg.fst;
             String to = arg.snd;
-            count += countOfAlpha(from, to);
+            count += offset(from, to);
         }
         return count;
     }
@@ -40,53 +40,48 @@ public class AlphaArgument extends Argument{
             Pair<String, String> arg = iterator.next();
             String from = arg.fst;
             String to = arg.snd;
-            int count = countOfAlpha(from, to);
+            int count = offset(from, to);
             if (index >= count){
                 index -= count;
                 continue;
             }
 
             //
-            StringBuilder strBuild = new StringBuilder(from.length());
-            for (int i = 0, len = from.length(); i < len; i++){
-                char fchar = from.charAt(i);
+
+            Integer[] offsets = new Integer[from.length()];
+            for (int i = 0, idx = from.length()-1; i < from.length(); i++,idx--){
+                int b = ((int)Math.pow(26,idx));
+                int div = index/b;
+
+                //char fchar = from.charAt(i);
                 //char tchar = to.charAt(i);
-                String fromLast = (i+1) < len ? from.substring(i+1,len-1) : null;
-                String toLast = (i+1) < len ? to.substring(i+1,len-1) : null;
+                //
+                offsets[i] = div;
 
-                /*int countLast = 0;
-                if (fromLast != null && toLast != null){
-                    countLast = countOfAlpha(fromLast, toLast);
 
-                    if (countLast == 0)
-                        return null;
+                index = index%b;
 
-                    int div = index / countLast;
-                    strBuild.append((char)(fchar+div));
+            }
 
-                    int mod = index % countLast;
-                    if (mod == 0){
 
-                    }else{
-                        index = mod;
+            StringBuilder strBuild = new StringBuilder();
+            for (int i = from.length()-1; i >= 0; i--){
+                char fchar = from.charAt(i);
+                char baseChar = isLowerCase(fchar) ? 'a' : 'A';
+                int foffset = fchar - baseChar;
+                if ((offsets[i] + foffset) >= 26){
+                    int offset = (offsets[i] + foffset) - 26;
+                    strBuild.append((char) (offset + baseChar));
+                    if ((i-1) >= 0){
+                        offsets[i-1] += 1;
+                    }else {
+                        strBuild.append(baseChar);
                     }
                 }else {
-                    return null;
-                }*/
-
-                if (fromLast == null && toLast == null){
-                    strBuild.append((char)(fchar+index));
-                    return strBuild.toString();
-                }else{
-                    int countLast = countOfAlpha(fromLast, toLast);
-                    int div = index / countLast;
-                    strBuild.append((char)(fchar+div));
-                    int mod = index % countLast;
-
-                    index = mod;
-
+                    strBuild.append((char) (baseChar + offsets[i] + foffset));
                 }
             }
+            return strBuild.reverse().toString();
         }
         return null;
     }
@@ -99,7 +94,7 @@ public class AlphaArgument extends Argument{
 
         String[] values = arg.split("-");
         String from = values[0];
-        String to = values[1];
+        String to = (values.length == 2) ? values[1] : values[0];
         if (from.length() != to.length()){
             return false;
         }
@@ -118,11 +113,15 @@ public class AlphaArgument extends Argument{
                 return false;
             }
 
-            if (fchar > tchar){
+            /*if (fchar > tchar && i > 0 && from.charAt(i-1) >= to.charAt(i-1)){
                 return false;
-            }
-
+            }*/
         }
+
+        if (compare(from, to) < 0){
+            return false;
+        }
+
         LOGGER.info("valid arg:" + arg);
         return true;
     }
@@ -130,25 +129,49 @@ public class AlphaArgument extends Argument{
     /*
     private
     */
-    private int countOfAlpha(String from, String to){
-        if (from.length() != to.length()){
-            return 0;
-        }
 
-        int count = 1;
-
-        for (int i = 0; i < from.length(); i++){
-            char fchar = from.charAt(i);
-            char tchar = to.charAt(i);
-            int charCount = tchar - fchar + 1;
-            count *= charCount;
-        }
-        return count;
-    }
 
     /*
     global
      */
-    private static boolean isUpperCase(char c){return (c >= 101 && c <= 132);}
-    private static boolean isLowerCase(char c){return (c >= 141 && c <= 172);}
+    private static boolean isUpperCase(char c){return (c >= 65 && c <= 90);}
+    private static boolean isLowerCase(char c){return (c >= 97 && c <= 122);}
+
+    private static int compare(String arg1, String arg2){
+        if (arg1.length() > arg2.length()){
+            return -1;
+        }else if (arg1.length() < arg2.length()){
+            return 1;
+        }
+
+        for (int i = 0; i < arg1.length(); i++){
+            char c1 = arg1.charAt(i);
+            char c2 = arg2.charAt(i);
+            if (c1 > c2)
+                return -1;
+            else if (c1 < c1)
+                return 1;
+        }
+
+        return 0;
+    }
+
+    private static int digitalize(String arg){
+        int result = 0;
+        for (int idx = arg.length()-1, i = 0; idx >=0; idx--,i++){
+            char c = arg.charAt(idx);
+            if (isUpperCase(c)){
+                c -= 32;
+            }
+
+            int tmp = c - 64;
+
+            result += (tmp * Math.pow(26,i));
+        }
+        return result;
+    }
+    public static int offset(String from, String to){
+        return digitalize(to) - digitalize(from) + 1;
+    }
+
 }

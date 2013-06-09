@@ -13,7 +13,7 @@ import java.util.Iterator;
  */
 public class NumberArgument extends Argument{
 
-    public NumberArgument(String argString) {
+    public NumberArgument(String argString) throws Exception{
         super(argString);
     }
 

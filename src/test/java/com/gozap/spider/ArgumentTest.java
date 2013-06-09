@@ -31,9 +31,24 @@ public class ArgumentTest {
 
     @Test
     public void testArgumentAlpha() throws Exception {
-        //String alpArg1 = "a-g";
-        //AlphaArgument arg1 = new AlphaArgument(alpArg1);
+        String alpArg1 = "ag";
+        AlphaArgument arg1 = new AlphaArgument(alpArg1);
 
-        //System.out.println("alpArg1 '" + alpArg1 + "' count:" + arg1.count());
+        String alpArg2 = "af-be,ca-de";
+        AlphaArgument arg2 = new AlphaArgument(alpArg2);
+
+        String alpArg3 = "abc-bgz,bhz-bja";
+        AlphaArgument arg3 = new AlphaArgument(alpArg3);
+
+        System.out.println("alpArg1 '" + alpArg1 + "' count:" + arg1.count());
+        System.out.println("alpArg1 index:" + (arg1.count()-1) + " value:" + arg1.argAtIndex(arg1.count()-1));
+        System.out.println("alpArg2 '" + alpArg2 + "' count:" + arg2.count());
+        System.out.println("alpArg2 index:" + (arg2.count()-1) + " value:" + arg2.argAtIndex(arg2.count()-1));
+        System.out.println("alpArg3 '" + alpArg3 + "' count:" + arg3.count());
+        System.out.println("alpArg31 index:" + (arg3.count()-1) + " value:" + arg3.argAtIndex(arg3.count()-1));
+
+
+        int result = AlphaArgument.offset("af", "be");
+        System.out.println("AlphaArgument.offset:" + result);
     }
 }

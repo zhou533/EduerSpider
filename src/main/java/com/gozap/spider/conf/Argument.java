@@ -19,7 +19,7 @@ public class Argument {
      */
     protected List<Pair<String, String>> args;
 
-    public Argument(String argString) {
+    public Argument(String argString) throws Exception{
         this.args = parseArgString(argString);
     }
 
@@ -38,12 +38,13 @@ public class Argument {
         return true;
     }
 
-    private List<Pair<String, String>> parseArgString(String arg){
+    private List<Pair<String, String>> parseArgString(String arg) throws Exception{
         List<Pair<String, String>> result = new ArrayList<Pair<String, String>>();
         String[] args = arg.split(",");
         for (int i = 0; i < args.length; i++){
             if (!isValidArgument(args[i])){
-                return null;
+                //
+                //throw new Exception("invalid argument format..");
             }
             String[] values = args[i].split("-");
             //if (values.length > 2 || values.length == 0){
