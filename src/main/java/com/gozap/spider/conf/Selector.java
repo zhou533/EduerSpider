@@ -9,10 +9,14 @@ package com.gozap.spider.conf;
  */
 public class Selector {
     private String name;
+    private SelectorType type;
     private String query;
 
-    public Selector(String name, String query) {
+    public Selector(String name,
+                    String type,
+                    String query) {
         this.name = name;
+        this.type = SelectorType.getType(type);
         this.query = query;
     }
 
@@ -23,5 +27,9 @@ public class Selector {
 
     public String getQuery() {
         return query;
+    }
+
+    public SelectorType getType() {
+        return type;
     }
 }

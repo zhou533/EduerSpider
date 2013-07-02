@@ -4,6 +4,7 @@ import au.com.bytecode.opencsv.CSVWriter;
 import com.gozap.spider.conf.Configuration;
 import com.gozap.spider.model.Saveable;
 import com.sun.tools.javac.util.Pair;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,12 +21,16 @@ import java.util.List;
  */
 public class Eduer implements Saveable{
 
+    private static final Logger LOGGER = Logger.getLogger(Eduer.class);
+
     private List<Pair<String, String>> values = new ArrayList<Pair<String, String>>();
 
     public Eduer() {
     }
 
     public void addValue(String key, String value){
+        if (key == null) key = "";
+        if (value == null) value = "";
         Pair<String, String> pair = new Pair<String, String>(key, value);
         values.add(pair);
     }
@@ -33,7 +38,15 @@ public class Eduer implements Saveable{
     @Override
     public void save2Csv() {
         try {
-            String fileName = Configuration.getInstance().getTaskName()+".csv";
+            String pathName = Configuration.getInstance().getSavePath();
+            File path = new File(pathName);
+            if (!path.exists()){
+                LOGGER.info("dir does not exist:" + pathName);
+                path.mkdirs();
+            }
+            String fileName = pathName +
+                    Configuration.getInstance().getTaskName()+
+                    Configuration.getInstance().getTimeSymbol() + ".csv";
             File file = new File(fileName);
             FileWriter fileWriter = new FileWriter(file, true);
             CSVWriter csvWriter = new CSVWriter(fileWriter);

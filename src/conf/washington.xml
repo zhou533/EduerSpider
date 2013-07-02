@@ -7,9 +7,10 @@
 	</task_arg_list>
 
 	<task_out_list>
-		<task_out name="Email">p:contains(@)</task_out>
+		<task_out name="Email" type="email">p:contains(@)</task_out>
 	</task_out_list>
-		
+
+    <task_out_is_loop>true</task_out_is_loop>
 	<task_interval>10</task_interval>
 	<task_saved_dir>/home/liwei/crawler/joa/</task_saved_dir>
 	<task_is_save_html>true</task_is_save_html>

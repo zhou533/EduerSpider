@@ -7,7 +7,9 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -23,13 +25,14 @@ public class Configuration {
     private static Configuration instance = new Configuration();
 
     private String url;
-    private int interval; //
     private String savePath;
-    private boolean isSaveHtml;
-    private boolean isOnlyEmail;
+    private boolean saveHtml;
+    private boolean loop;
     private String taskName;
 
     private int threadCount;
+
+    private String timeSymbol;
 
     private Arguments arguments = new Arguments();
     private List<Selector> selectors = new ArrayList<Selector>();
@@ -38,9 +41,11 @@ public class Configuration {
 
      */
     private Configuration(){
-        isSaveHtml = false;
+        savePath = null;
+        saveHtml = false;
         threadCount = 1;
         taskName = "Unknown";
+        timeSymbol = "0000_00_00_00_00_00";
     }
 
     /*
@@ -71,6 +76,10 @@ public class Configuration {
     public boolean load(String filename){
         boolean result = false;
         try {
+            Date date = new Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("_yyyyMMdd-HHmmss");
+            timeSymbol = simpleDateFormat.format(date);
+
             SAXReader reader = new SAXReader();
             Document doc = reader.read(new File(filename));
 
@@ -130,12 +139,13 @@ public class Configuration {
             }
 
             List<Element> taskOutList = taskOutListElement.elements("task_out");
-            Iterator<Element> tastOutIterator = taskOutList.iterator();
-            while (tastOutIterator.hasNext()){
-                Element taskOutElement = tastOutIterator.next();
+            Iterator<Element> taskOutIterator = taskOutList.iterator();
+            while (taskOutIterator.hasNext()){
+                Element taskOutElement = taskOutIterator.next();
                 String name = taskOutElement.attributeValue("name");
                 String query = new String(taskOutElement.getText().getBytes("UTF-8"));
-                Selector selector = new Selector(name, query);
+                String type = taskOutElement.attributeValue("type");
+                Selector selector = new Selector(name, type, query);
                 selectors.add(selector);
             }
 
@@ -143,6 +153,24 @@ public class Configuration {
             Element taskNameElement = config.element("task_name");
             if (taskNameElement != null){
                 taskName = taskNameElement.getText();
+            }
+
+            //
+            Element taskSavedDirElement = config.element("task_saved_dir");
+            if (taskSavedDirElement != null){
+                savePath = taskSavedDirElement.getText();
+            }
+
+            //
+            Element taskIsSaveHtmlElement = config.element("task_is_save_html");
+            if (taskIsSaveHtmlElement != null){
+                saveHtml = taskIsSaveHtmlElement.getText().equalsIgnoreCase("true") ? true : false;
+            }
+
+            //
+            Element taskOutIsLoopElement = config.element("task_out_is_loop");
+            if (taskOutIsLoopElement != null){
+                loop = taskOutIsLoopElement.getText().equalsIgnoreCase("true") ? true : false;
             }
 
             result = true;
@@ -173,20 +201,12 @@ public class Configuration {
         return url;
     }
 
-    public int getInterval() {
-        return interval;
-    }
-
     public String getSavePath() {
         return savePath;
     }
 
     public boolean isSaveHtml() {
-        return isSaveHtml;
-    }
-
-    public boolean isOnlyEmail() {
-        return isOnlyEmail;
+        return saveHtml;
     }
 
     public String getTaskName() {
@@ -203,6 +223,14 @@ public class Configuration {
 
     public List<Selector> getSelectors() {
         return selectors;
+    }
+
+    public boolean isLoop() {
+        return loop;
+    }
+
+    public String getTimeSymbol() {
+        return timeSymbol;
     }
 }
 

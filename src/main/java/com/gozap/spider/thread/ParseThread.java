@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -50,10 +51,22 @@ public class ParseThread implements Runnable {
             }
 
             if (Configuration.getInstance().isSaveHtml()){
-                String fileName = Configuration.getInstance().getTaskName()+"_"+item.getSaveId()+".html";
-                FileOutputStream fileOutputStream = null;
+                String fileName = Configuration.getInstance().getSavePath() + "html/";// +
+                        //Configuration.getInstance().getTaskName() +"_"+item.getSaveId()+".html";
+
                 try {
-                    fileOutputStream = new FileOutputStream(fileName);
+                    File file = new File(fileName);
+                    if (!file.exists()){
+                        LOGGER.info("dir does not exist:" + fileName);
+                        file.mkdirs();
+                        //file.createNewFile();
+                    }
+                    String fn = fileName + Configuration.getInstance().getTaskName() +"_"+item.getSaveId()+".html";
+                    File f = new File(fn);
+                    if (!f.exists()){
+                        f.createNewFile();
+                    }
+                    FileOutputStream fileOutputStream = new FileOutputStream(f);
                     fileOutputStream.write(bytes);
                     fileOutputStream.close();
                 }catch (IOException e){

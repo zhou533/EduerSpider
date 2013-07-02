@@ -5,6 +5,7 @@ import com.gozap.spider.model.CrawlItem;
 import com.gozap.spider.thread.ParseThread;
 import com.gozap.spider.thread.StoreThread;
 import com.gozap.spider.utils.Common;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -70,7 +71,7 @@ public class EduerSpider {
             }
 
             //
-            CrawlItem item = new CrawlItem(crawlUrl.toString(), String.valueOf(i));
+            CrawlItem item = new CrawlItem(crawlUrl.toString(), StringUtils.join(argList,"_"));
             try {
                 Common.ES_WORK_QUEUE.put(item);
             }catch (InterruptedException e){
