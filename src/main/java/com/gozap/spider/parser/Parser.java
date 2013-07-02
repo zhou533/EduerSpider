@@ -39,29 +39,43 @@ public class Parser {
         Iterator<Selector> iterator = selectors.iterator();
         while (iterator.hasNext()){
             Selector selector = iterator.next();
-            LOGGER.info("Current selector:"+selector.getName() + " query:" + selector.getQuery());
-            Elements elements = document.select(selector.getQuery());
-            if (null != elements && elements.size() > 0){
-                Element element = elements.get(0);
-                LOGGER.info("Ele:"+element.toString());
-                String value = element.ownText();
-                if (selector.getType() == SelectorType.SELECTOR_TYPE_NAME){
-                    value = getMatcher("[:\\s]*[\\u4e00-\\u9fa5]{2,4}[;\\s]*", value);
-                    value = StringUtils.remove(value,':');
-                    value = StringUtils.remove(value,';');
-                    value = StringUtils.deleteWhitespace(value);
+            List<String> querys = selector.getQuerys();
+            Iterator<String> querysIter = querys.iterator();
+            boolean found = false;
+            while (querysIter.hasNext()){
+                String query = querysIter.next();
 
-                    if (value.isEmpty()){
-                        value = element.ownText();
+                LOGGER.info("Current selector:"+selector.getName() + " query:" + query);
+                Elements elements = document.select(query);
+                if (null != elements && elements.size() > 0){
+                    Element element = elements.get(0);
+                    LOGGER.info("Ele:"+element.toString());
+                    String value = element.ownText();
+                    if (selector.getType() == SelectorType.SELECTOR_TYPE_NAME){
+                        value = getMatcher("[:\\s]*[\\u4e00-\\u9fa5]{2,4}[;\\s]*", value);
+                        value = StringUtils.remove(value,':');
+                        value = StringUtils.remove(value,';');
+                        value = StringUtils.deleteWhitespace(value);
+
+                        if (value.isEmpty()){
+                            value = element.ownText();
+                        }
+                    }else if (selector.getType() == SelectorType.SELECTOR_TYPE_EMAIL){
+                        value = getMatcher("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",value);
+
                     }
-                }else if (selector.getType() == SelectorType.SELECTOR_TYPE_EMAIL){
-                    value = getMatcher("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}",value);
-
+                    eduer.addValue(selector.getName(), value);
+                    found = true;
+                }else {
+                    //
+                    continue;
                 }
-                eduer.addValue(selector.getName(), value);
-            }else {
+            }
+
+            if (!found){
                 eduer.addValue(selector.getName(), "");
             }
+
         }
 
 

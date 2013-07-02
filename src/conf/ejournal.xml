@@ -7,8 +7,14 @@
 	</task_arg_list>
 
 	<task_out_list>
-        <task_out name="Name" type="name">span:contains(通讯作者)</task_out>
-		<task_out name="Email" type="email">span:contains(E-mail)</task_out>
+        <task_out name="Name" type="name">
+            <selector>span:contains(通讯作者) b</selector>
+            <selector>span:contains(通讯作者)</selector>
+        </task_out>
+
+		<task_out name="Email" type="email">
+            <selector>span:contains(E-mail)</selector>
+		</task_out>
 	</task_out_list>
 
     <task_out_is_loop>false</task_out_is_loop>

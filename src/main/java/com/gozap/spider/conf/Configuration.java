@@ -143,10 +143,17 @@ public class Configuration {
             while (taskOutIterator.hasNext()){
                 Element taskOutElement = taskOutIterator.next();
                 String name = taskOutElement.attributeValue("name");
-                String query = new String(taskOutElement.getText().getBytes("UTF-8"));
                 String type = taskOutElement.attributeValue("type");
-                Selector selector = new Selector(name, type, query);
-                selectors.add(selector);
+
+                Selector selector = new Selector(name, type);
+                List<Element> selectorList = taskOutElement.elements("selector");
+                for (Element e : selectorList){
+                    String query = new String(e.getText().getBytes("UTF-8"));
+                    selector.addQuery(query);
+                }
+
+                if (selector.getQuerys().size() > 0)
+                    selectors.add(selector);
             }
 
             //

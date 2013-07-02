@@ -1,5 +1,8 @@
 package com.gozap.spider.conf;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chouchris
@@ -10,14 +13,12 @@ package com.gozap.spider.conf;
 public class Selector {
     private String name;
     private SelectorType type;
-    private String query;
+    private List<String> querys = new ArrayList<String>();
 
     public Selector(String name,
-                    String type,
-                    String query) {
+                    String type) {
         this.name = name;
         this.type = SelectorType.getType(type);
-        this.query = query;
     }
 
 
@@ -25,11 +26,15 @@ public class Selector {
         return name;
     }
 
-    public String getQuery() {
-        return query;
+    public List<String> getQuerys() {
+        return querys;
     }
 
     public SelectorType getType() {
         return type;
+    }
+
+    public void addQuery(String query){
+        querys.add(query);
     }
 }
