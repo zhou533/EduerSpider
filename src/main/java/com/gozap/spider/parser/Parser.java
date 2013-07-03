@@ -66,6 +66,7 @@ public class Parser {
                     }
                     eduer.addValue(selector.getName(), value);
                     found = true;
+                    break;
                 }else {
                     //
                     continue;

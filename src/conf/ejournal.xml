@@ -8,6 +8,7 @@
 
 	<task_out_list>
         <task_out name="Name" type="name">
+            <!-- 第一个selector返回空时，之后的才会调用-->
             <selector>span:contains(通讯作者) b</selector>
             <selector>span:contains(通讯作者)</selector>
         </task_out>

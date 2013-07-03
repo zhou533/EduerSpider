@@ -2,30 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e13faa50-66d9-432b-9d00-607bc9059a1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java" afterPath="$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java" />
-    </list>
-    <list id="c6e84959-981a-4a81-a649-bb275b7f2269" name="New changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_cache_4_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_2_5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EduerSpider.log" afterPath="$PROJECT_DIR$/EduerSpider.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java" afterPath="$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/crawler_joa_config.xml" afterPath="$PROJECT_DIR$/src/conf/crawler_joa_config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/ejournal.xml" afterPath="$PROJECT_DIR$/src/conf/ejournal.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EduerSpider.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/spider.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1369909369992" ignored="false" />
-    <file path="/pom.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1369985854558" ignored="false" />
+    <file path="/pom.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372834315820" ignored="false" />
     <file path="/Spider.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1369966805692" ignored="false" />
     <file path="/EduerSpider.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372737904375" ignored="false" />
     <file path="/a.dummy" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1370491451052" ignored="false" />
     <file path="/log4j.properties" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1369974010456" ignored="false" />
-    <file path="/fragment.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372751793377" ignored="false" />
-    <file path="/Dummy.txt" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372759138952" ignored="false" />
+    <file path="/fragment.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372834541568" ignored="false" />
+    <file path="/Dummy.txt" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372843172107" ignored="false" />
     <file path="/Configuration.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372758547850" ignored="false" />
     <file path="/ParamTypeEnum.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1370232586791" ignored="false" />
     <file path="/ArgumentTypeEnum.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1370236135330" ignored="false" />
@@ -47,16 +39,19 @@
     <file path="/Selector.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372758369656" ignored="false" />
     <file path="/StoreThread.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1370595364581" ignored="false" />
     <file path="/Eduer.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372750665746" ignored="false" />
-    <file path="/ejournal.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372758027851" ignored="false" />
+    <file path="/ejournal.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372816244918" ignored="false" />
     <file path="/washington.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372730308621" ignored="false" />
     <file path="/ChouTiSpace/ChouTiService/TiaoDan/tiaodan1.0.0/pom.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372662470778" ignored="false" />
     <file path="/ChouTiSpace/ChouTiService/TiaoDan/tiaodan1.0.0/src/test/java/com/chouti/tiaodan/service/test/TiaoDanRecordServiceTest.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372662731615" ignored="false" />
     <file path="/TiaoDanRecordServiceTest.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372662728576" ignored="false" />
-    <file path="$PROJECT_DIR$/src/conf/crawler_joa_config.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372748641970" ignored="true" />
     <file path="/SelectorType.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372731052652" ignored="false" />
     <file path="/Lab/Spiderman/spiderman-core/src/main/java/org/eweb4j/spiderman/fetcher/Status.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372730872695" ignored="false" />
     <file path="/Status.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372730862920" ignored="false" />
-    <file path="$PROJECT_DIR$/EduerSpider.log" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372752414482" ignored="false" />
+    <file path="/Lab/PDFDemo/pom.xml" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372834565270" ignored="false" />
+    <file path="/Lab/PDFDemo/src/main/java/PDFDemo.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372835911961" ignored="false" />
+    <file path="/PDFDemo.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372835911325" ignored="false" />
+    <file path="/Lab/PDFDemo/src/main/java/PDF2TextConverter.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372835553191" ignored="false" />
+    <file path="/PDF2TextConverter.java" changelist="e13faa50-66d9-432b-9d00-607bc9059a1c" time="1372835529569" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +66,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -108,7 +104,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -121,7 +116,16 @@
       <file leaf-file-name="EduerSpider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/EduerSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="29" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+            <state line="23" column="43" selection-start="608" selection-end="647" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArgumentsTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/gozap/spider/ArgumentsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,7 +143,16 @@
       <file leaf-file-name="ejournal.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/conf/ejournal.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="283" selection-end="291" vertical-scroll-proportion="0.0">
+            <state line="10" column="40" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="32" selection-start="4021" selection-end="4411" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,7 +161,7 @@
       <file leaf-file-name="Parser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="26" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.53333336">
+            <state line="63" column="84" selection-start="2455" selection-end="2496" vertical-scroll-proportion="0.41107872">
               <folding />
             </state>
           </provider>
@@ -158,17 +171,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/model/impl/Eduer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="61" column="31" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#918#934#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/thread/ParseThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="54" selection-start="1605" selection-end="1615" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,10 +189,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Selector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="26" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#366#374#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,9 +198,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="82" column="47" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,10 +233,10 @@
         <option value="$PROJECT_DIR$/src/conf/crawler_joa_config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gozap/spider/thread/ParseThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gozap/spider/model/impl/Eduer.java" />
-        <option value="$PROJECT_DIR$/src/conf/ejournal.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Selector.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/conf/ejournal.xml" />
       </list>
     </option>
   </component>
@@ -315,9 +312,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="x" value="-1080" />
+    <option name="y" value="-1120" />
+    <option name="width" value="1080" />
+    <option name="height" value="1920" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -685,12 +683,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -818,6 +816,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -843,19 +854,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -931,7 +929,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e13faa50-66d9-432b-9d00-607bc9059a1c" name="Default" comment="" />
-      <changelist id="c6e84959-981a-4a81-a649-bb275b7f2269" name="New changelist" comment="" />
       <created>1369908886284</created>
       <updated>1369908886284</updated>
     </task>
@@ -963,7 +960,11 @@
       <created>1372759146309</created>
       <updated>1372759146309</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="New changelist">
+      <created>1372759374366</created>
+      <updated>1372759374366</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -987,7 +988,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <frame x="-1080" y="-1120" width="1080" height="1920" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -998,16 +999,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17098865" sideWeight="0.6712538" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15473887" sideWeight="0.6712538" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24311183" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="true" weight="0.5474006" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-1046" y="-309" width="976" height="972" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24274662" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.5474006" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-1046" y="-309" width="976" height="972" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1054,7 +1055,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="support multi selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="New changelist" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1072,6 +1073,7 @@
     <MESSAGE value="add configuration" />
     <MESSAGE value="rebuild task output" />
     <MESSAGE value="support multi selector" />
+    <MESSAGE value="New changelist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1085,13 +1087,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/NumberArgument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.26916802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/SelectorType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="24" selection-start="200" selection-end="212" vertical-scroll-proportion="0.21565495">
@@ -1101,16 +1096,7 @@
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/FileOutputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="560" selection-end="560" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="8" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.320339">
-          <folding />
-        </state>
+        <state line="16" column="11" selection-start="560" selection-end="560" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/model/CrawlItem.java">
@@ -1122,9 +1108,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.0.1/commons-lang3-3.0.1-sources.jar!/org/apache/commons/lang3/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3751" column="25" selection-start="154256" selection-end="154256" vertical-scroll-proportion="-6.481356">
-          <folding />
-        </state>
+        <state line="3751" column="25" selection-start="154256" selection-end="154256" vertical-scroll-proportion="-6.481356" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/thread/ParseThread.java">
@@ -1137,22 +1121,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/model/impl/Eduer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="31" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#918#934#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/conf/washington.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="353" selection-end="369" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/EduerSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="29" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1166,24 +1141,12 @@
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/List.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="401" selection-end="401" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="19" column="12" selection-start="401" selection-end="401" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="26" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#366#374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/conf/ejournal.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="283" selection-end="291" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1191,15 +1154,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/conf/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="47" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conf/ejournal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/EduerSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="608" selection-end="647" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gozap/spider/ArgumentsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="32" selection-start="4021" selection-end="4411" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gozap/spider/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="26" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.53333336">
+        <state line="63" column="84" selection-start="2455" selection-end="2496" vertical-scroll-proportion="0.41107872">
           <folding />
         </state>
       </provider>
