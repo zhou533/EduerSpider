@@ -1,6 +1,6 @@
 package com.gozap.spider.conf;
 
-import com.sun.tools.javac.util.Pair;
+import com.gozap.spider.utils.Pair;
 
 import java.util.Iterator;
 
@@ -21,11 +21,11 @@ public class NumberArgument extends Argument{
     @Override
     public int count() {
         int count = 0;
-        Iterator<Pair<String, String>> iterator = args.iterator();
+        Iterator<Pair> iterator = args.iterator();
         while (iterator.hasNext()){
-            Pair<String, String> arg = iterator.next();
-            int from = Integer.parseInt(arg.fst);
-            int to = Integer.parseInt(arg.snd);
+            Pair arg = iterator.next();
+            int from = Integer.parseInt(arg.getName());
+            int to = Integer.parseInt(arg.getValue());
             count += (to - from + 1);
         }
 
@@ -34,11 +34,11 @@ public class NumberArgument extends Argument{
 
     @Override
     public String argAtIndex(int index) {
-        Iterator<Pair<String, String>> iterator = args.iterator();
+        Iterator<Pair> iterator = args.iterator();
         while (iterator.hasNext()){
-            Pair<String, String> arg = iterator.next();
-            int from = Integer.parseInt(arg.fst);
-            int to = Integer.parseInt(arg.snd);
+            Pair arg = iterator.next();
+            int from = Integer.parseInt(arg.getName());
+            int to = Integer.parseInt(arg.getValue());
 
             int dest = from + index;
             if (dest > to){

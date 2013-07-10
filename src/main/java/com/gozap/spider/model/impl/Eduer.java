@@ -3,7 +3,7 @@ package com.gozap.spider.model.impl;
 import au.com.bytecode.opencsv.CSVWriter;
 import com.gozap.spider.conf.Configuration;
 import com.gozap.spider.model.Saveable;
-import com.sun.tools.javac.util.Pair;
+import com.gozap.spider.utils.Pair;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -23,7 +23,7 @@ public class Eduer implements Saveable{
 
     private static final Logger LOGGER = Logger.getLogger(Eduer.class);
 
-    private List<Pair<String, String>> values = new ArrayList<Pair<String, String>>();
+    private List<Pair> values = new ArrayList<Pair>();
 
     public Eduer() {
     }
@@ -31,7 +31,7 @@ public class Eduer implements Saveable{
     public void addValue(String key, String value){
         if (key == null) key = "";
         if (value == null) value = "";
-        Pair<String, String> pair = new Pair<String, String>(key, value);
+        Pair pair = new Pair(key, value);
         values.add(pair);
     }
 
@@ -54,7 +54,7 @@ public class Eduer implements Saveable{
             int size = values.size();
             String[] strs = new String[size];
             for (int i = 0; i < size; i++){
-                strs[i] = values.get(i).snd;
+                strs[i] = values.get(i).getValue();
             }
             csvWriter.writeNext(strs);
             csvWriter.close();
